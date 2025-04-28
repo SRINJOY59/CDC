@@ -29,6 +29,7 @@ int main(){
         adj[v].push_back(u);
     }
 
+3
     ll ans = 0;
     vector<ll>visited(n, 0);
     for(ll i = 0;i<n;i++){
