@@ -11,7 +11,7 @@ void build(vector<ll>&arr, vector<ll>&t, ll index, ll L, ll R){
     ll mid = (L + R)/2;
     build(arr, t, 2*index, L, mid);
     build(arr, t, 2*index + 1, mid+1, R);
-    t[index] = t[2*index] + t[2*index+1];
+    t[index] = t[2*index]^t[2*index+1];
 }
 
 void update(vector<ll>&arr, vector<ll>&t, ll index, ll L, ll R, ll pos, ll val){
@@ -25,7 +25,7 @@ void update(vector<ll>&arr, vector<ll>&t, ll index, ll L, ll R, ll pos, ll val){
     ll mid = (L + R)/2;
     update(arr, t, 2*index, L, mid, pos, val);
     update(arr, t, 2*index+1, mid+1, R, pos, val);
-    t[index] = t[2*index] + t[2*index+1];
+    t[index] = t[2*index]^t[2*index+1];
 }
 
 
@@ -38,7 +38,7 @@ ll query(vector<ll>&arr, vector<ll>&t, ll index, ll L, ll R, ll LQ, ll RQ){
         return t[index];
     }
     ll mid = (L+R)/2;
-    return query(arr, t, 2*index, L, mid, LQ, RQ) + query(arr, t, 2*index+1, mid+1, R, LQ, RQ);
+    return query(arr, t, 2*index, L, mid, LQ, RQ)^query(arr, t, 2*index+1, mid+1, R, LQ, RQ);
 }
 
 
@@ -55,19 +55,10 @@ int main(){
     vector<ll>t(4*n);
     build(arr, t, 1, 0, n-1);
     while(Q--){
-        ll type;
-        cin>>type;
-        if(type == 1){
-            ll x, V;
-            cin>>x>>V;
-            update(arr, t, 1, 0, n-1, x-1, V);
-        }
-        else{
             ll LQ, RQ;
             cin>>LQ>>RQ;
             ll answer = query(arr, t, 1, 0, n-1, LQ-1, RQ-1);
             cout<<answer<<endl;
-        }
     }
     return 0;
 }
