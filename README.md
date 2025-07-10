@@ -19,7 +19,7 @@ flowchart TD
   A --> D1
   P --> D1
 
-  D1 --> O2[Content Agent (refine)]
+  D1 --> O2[Content Agent (refine)];
   D1 --> C2[Curriculum Agent (refine)]
 
   D1 --> Review[Teacher Review]
