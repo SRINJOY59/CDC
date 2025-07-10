@@ -21,10 +21,8 @@ flowchart TD
 
   D1 --> O2[Content Agent (refine)]
   D1 --> C2[Curriculum Agent (refine)]
-  O2 --> Review[Teacher Review]
-  C2 --> Review
-  D1 --> Review
 
+  D1 --> Review[Teacher Review]
   Review --> D2[Refined Draft]
   D2 --> Final[Final Weekly Plan]
   Final --> Export[Export to LMS / Calendar / PDF]
