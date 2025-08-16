@@ -17,8 +17,8 @@ This repository encapsulates a curated selection of problems solved during my **
 - **Striver’s A2Z DSA Sheet**  
   [https://takeuforward.org/strivers-a2z-dsa-course](https://takeuforward.org/strivers-a2z-dsa-course)
 
-- **Brainstellar Probability Puzzles** (non-YouTube direct link)  
-  [https://brainstellar.com/puzzles/probability](https://brainstellar.com/puzzles/probability)
+- **Brainstellar Probability Puzzles** 
+  [https://brainstellar.com/puzzles/probability](https://brainstellar.com/)
 
 - **CampusX Video Lectures (YouTube Channel)**  
   [https://www.youtube.com/c/CampusX](https://www.youtube.com/c/CampusX)
